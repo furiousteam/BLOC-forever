@@ -69,3 +69,9 @@ After this, you will need to stop **./BLOCd** daemon
 ```
 pkill BLOCd
 ```
+
+### About BLOC
+
+If this is your first time hearing about BLOC, we recommend starting by visiting the official [BLOC.MONEY](https://bloc.money) website and/or the [BLOC Wiki](https://wiki.bloc.money)
+
+[![BLOC](https://wiki.bloc.money/images/BLOC-in-out_blue.gif)](https://bloc.money)
