@@ -1,6 +1,6 @@
 ## INFO
 
-Script for testing if blockchaincoind daemon is running. If it's not running, it will start the blockchaincoind daemon.
+Script for testing if BLOCd daemon is running. If it's not running, it will start the BLOCd daemon.
 
 Idea taken from https://superuser.com/a/685444/124884
 
@@ -11,8 +11,8 @@ The script needs to be put as a cronjob that runs every minute.
 
 ```
 cd ~
-wget https://raw.githubusercontent.com/furiousteam/blockchaincoind-forever/master/blockchaincoind-forever.sh
-chmod +x blockchaincoind-forever.sh
+wget https://raw.githubusercontent.com/furiousteam/BLOC-forever/master/bloc-forever.sh
+chmod +x BLOCd-forever.sh
 ```
 
 then
@@ -34,21 +34,21 @@ sudo crontab -e
 append in the editor
 
 ```
-* * * * * /root/blockchaincoind-forever.sh > /dev/null 2>/dev/null
+* * * * * /root/BLOCd-forever.sh > /dev/null 2>/dev/null
 ```
 
 Exit the editor press CTRL+X, then Y, then press ENTER. The output should be "crontab: installing new crontab", meaning it's a success.
 
-The script will automatically start blockchaincoind daemon. So, you don't have to manually run **./blockchaincoind** in command line.
+The script will automatically start BLOCd daemon. So, you don't have to manually run **./BLOCd** in command line.
 
 
 ## CHECKING THE SCRIPT
 
-Because the **./blockchaincoind** daemon now runs in the background, you will not be able to see the logs directly.
+Because the **./BLOCd** daemon now runs in the background, you will not be able to see the logs directly.
 You can check the logs live by typing the following in command line:
 
 ```
-tail -f -n 50 /root/blockchain-coin/blockchaincoind.log
+tail -f -n 50 /root/BLOC/BLOCd.log
 ```
 
 "-n 50" means that it will also show the last 50 lines in the log file.
@@ -64,8 +64,8 @@ sudo crontab -e
 
 and put a **#** in from of the command (that was insert as in SETUP section) or delete that line completely.
 
-After this, you will need to stop **./blockchaincoind** daemon
+After this, you will need to stop **./BLOCd** daemon
 
 ```
-pkill blockchaincoind
+pkill BLOCd
 ```
